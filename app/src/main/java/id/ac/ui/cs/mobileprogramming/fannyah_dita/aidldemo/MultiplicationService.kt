@@ -11,7 +11,7 @@ class MultiplicationService : Service() {
         return binder
     }
 
-    val binder = object : MultiplyInterface.Stub() {
+    private val binder = object : MultiplyInterface.Stub() {
 
         @Throws(RemoteException::class)
         override fun multiply(firstNum: Int, secondNum: Int): Int {
